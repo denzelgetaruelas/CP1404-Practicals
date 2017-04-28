@@ -1,11 +1,8 @@
 <Widget>:
     canvas.before:
         Color:
-            rgba: 0, 0.5, 0, 1
-        Rectangle:
-            pos: self.pos
-            size: self.size
-    color: 0, 0, 0, 1
+            rgba: 1, 0, 1, 1
+    color: 0, 0, 1, 1
 <Button>:
     font_size: 20
     background_normal: ''
@@ -15,11 +12,18 @@
             rgba: 0, 0, 0, 1
         Line:
             rectangle: self.x + 1, self.y + 1, self.width - 1, self.height - 1
+<Label>:
+    canvas.before:
+        Color:
+            rgba: 1, 0, 0, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
 BoxLayout:
     orientation: 'vertical'
     BoxLayout:
         orientation: 'horizontal'
-        Label:
+        TextInput:
             id: input_miles
             size_hint_x: 5
             text: '34'
